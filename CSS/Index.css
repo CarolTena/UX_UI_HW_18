@@ -8,14 +8,24 @@ body {
 }
 
 header {
-  height: 700px;
+  height: 100%;
   background-color: rgb(134, 63, 161);
-  padding-top: 5px;
-  background-image: url(../Images/profilePic.png);
-  background-size: 690px;
-  background-repeat: no-repeat;
-  background-position-x: right;
-  background-position-y: top;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.heroContainerText {
+  width: 50%;
+}
+
+.heroContainerImage {
+  width: 50%;
+  margin-top: -150px;
+  padding-right: 45px;
+}
+
+.heroContainerImage img {
+  width: 100%;
 }
 
 .logo img {
@@ -38,7 +48,7 @@ header {
 }
 
 .buttonContainer {
-  margin-top: 100px;
+  margin-top: 10%;
 }
 
 .downloadBtn,
@@ -66,6 +76,8 @@ header {
 
 .heroInfo {
   padding-left: 45px;
+  display: flex;
+  flex-direction: row;
 }
 
 .heroText h1 {
@@ -96,13 +108,12 @@ header {
 }
 
 .aboutMeImage img {
-  width: 500px;
+  width: 80%;
 }
 
 .aboutMeText {
   width: 50%;
   margin: 45px;
-  border: 1px solid red;
 }
 .aboutMeText h1 {
   color: rgb(134, 63, 161);
@@ -152,29 +163,74 @@ header {
   text-align: center;
 }
 
-.myWork h1 {
+.skillsList p {
+  font-size: 20px;
+}
+
+.skillsList h3 {
   color: rgb(134, 63, 161);
+  font-size: 22px;
+}
+
+.myWork {
+  background-color: rgb(134, 63, 161);
+  padding: 20px 45px;
+}
+
+.myWork h1 {
+  color: white;
   font-size: 36px;
-  padding-top: 15px;
   margin-top: 0;
-  margin: 45px;
+  padding-top: 15px;
 }
+
 .containerGrid {
-display: grid;
-grid-template-rows: fit-content(25%) 25% 25% 25%;
-grid-template-columns: 50%;
-row-gap: 50px;
-column-gap: 45px;
-margin: 45px;
-border: 1px solid red;
+  display: grid;
+  grid-template-rows: 33% 33% 33%;
+  grid-template-columns: 50% 50%;
 }
 
+.MyWorkGrid {
+  display: grid;
+  align-content: center;
+  padding-left: 45px;
+}
 
+.MyWorkGrid h3 {
+  color: rgb(245, 185, 56);
+  font-size: 36px;
+}
 
+.MyWorkGrid p {
+  font-size: 22px;
+  color: white;
+  margin-bottom: 40px;
+}
 
+.myWorkImages {
+  justify-content: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  text-align: center;
+}
 
+.project1Btn {
+  border: 0;
+  color: rgb(134, 63, 161);
+  font-weight: bolder;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  width: 175px;
+  background-color: rgb(245, 185, 56);
+  border-radius: 4px;
+}
 
-
+.myWorkImages img {
+  width: 60%;
+}
 
 footer {
   display: flex;
@@ -185,7 +241,7 @@ footer {
 }
 
 .blackFooter {
-  height: 400px;
+  height: 100%;
   background-color: rgb(0, 0, 0);
   width: 100%;
 }
@@ -219,7 +275,7 @@ footer {
 }
 
 .contactCircle {
- display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -268,4 +324,86 @@ content h1 {
 
 .copyright {
   padding-right: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    min-width: 500px;
+    padding: 0;
+  }
+
+  header {
+    padding-top: 10px;
+  }
+
+  .menuList {
+    margin: 0;
+  }
+
+  .heroContainerImage {
+    margin: 0;
+  }
+
+  .heroInfo {
+    flex-direction: column-reverse;
+    padding: 0 20px;
+  }
+
+  .heroContainerImage,
+  .heroContainerText {
+    width: 100%;
+  }
+  .flexContainerAboutMe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aboutMeImage {
+    width: 100%;
+    padding: 0;
+    margin: 40px 0 0 0;
+  }
+
+  .aboutMeText {
+    width: 90%;
+    margin: 0;
+    padding-bottom: 45px;
+  }
+
+  .flexContainerSkills {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skillsList {
+    width: 100%;
+  }
+
+  .containerGrid {
+    grid-template-rows: 350px 300px 350px 400px 350px 400px;
+    grid-template-columns: 100%;
+    text-align: center;
+  }
+
+  .icons {
+    flex-direction: column;
+  }
+
+
+  .MyWorkGrid h3 {
+    margin: 0;
+  }
+
+  .MyWorkGrid {
+    padding: 0px;
+  }
+
+  .MyWorkGrid p {
+    margin: 10% 0;
+  }
+
+  .project1Btn {
+    margin-bottom: 80px;
+  }
 }
