@@ -170,6 +170,8 @@ header {
 .skillsList h3 {
   color: rgb(134, 63, 161);
   font-size: 22px;
+  height: 15%;
+  
 }
 
 .myWork {
@@ -338,10 +340,16 @@ content h1 {
 
   .menuList {
     margin: 0;
+    padding-left: 20px;
   }
 
   .heroContainerImage {
     margin: 0;
+    padding: 0;
+  }
+
+  .menuList li {
+    padding-right: 20px;
   }
 
   .heroInfo {
@@ -405,5 +413,6 @@ content h1 {
 
   .project1Btn {
     margin-bottom: 80px;
-  }
+
+
 }
